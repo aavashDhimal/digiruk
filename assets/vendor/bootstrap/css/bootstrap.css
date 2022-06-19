@@ -1779,7 +1779,7 @@ pre code {
     float: left;
   }
   .col-sm-12 {
-    width: 100%;
+    width: 90%;
   }
   .col-sm-11 {
     width: 91.66666667%;
@@ -1791,7 +1791,7 @@ pre code {
     width: 75%;
   }
   .col-sm-8 {
-    width: 66.66666667%;
+    width: 100%;
   }
   .col-sm-7 {
     width: 58.33333333%;
@@ -6755,3 +6755,13 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.post-item-mid .title{
+   padding-top:40px ;
+}
+.navbar .navbar-default .main-menu .megamenu{
+  margin-bottom: 0px;
+  background-color: #1b6d85;
+}
+.div-container{
+  background-color: red;
+}

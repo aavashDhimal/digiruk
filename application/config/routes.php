@@ -58,6 +58,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['index'] = 'home_controller/index';
 $route['error-404'] = 'home_controller/error_404';
 
+
+
+
 $route[$routes->posts]['GET'] = 'home_controller/posts';
 $route[$routes->gallery_album . '/(:num)']['GET'] = 'home_controller/gallery_album/$1';
 $route[$routes->tag . '/(:any)']['GET'] = 'home_controller/tag/$1';

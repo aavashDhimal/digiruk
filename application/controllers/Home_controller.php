@@ -41,7 +41,37 @@ class Home_controller extends Home_Core_Controller
         $this->load->view('index', $data);
         $this->load->view('partials/_footer', $data);
     }
+    /**
+     * vlogs Page
+     */
+    public function vlogs()
+    {
+        get_method();
+        $data['title'] = $this->settings->home_title;
+        $data['description'] = $this->settings->site_description;
+        $data['keywords'] = $this->settings->keywords;
+        $data['home_title'] = $this->settings->home_title;
 
+        //latest posts
+        $data['latest_posts'] = $this->latest_category_posts;
+        $data['slider_posts'] = $data['latest_posts'];
+        $data['featured_posts'] = $data['latest_posts'];
+        //slider posts
+        if ($this->general_settings->show_latest_posts_on_slider != 1) {
+            $data['slider_posts'] = get_slider_posts();
+        }
+        //feature posts
+        if ($this->general_settings->show_latest_posts_on_featured != 1) {
+            $data['featured_posts'] = get_featured_posts();
+        }
+
+        //breaking news
+        $data['breaking_news'] = get_breaking_news();
+
+        $this->load->view('partials/_header', $data);
+        $this->load->view('index', $data);
+        $this->load->view('partials/_footer', $data);
+    }
     /**
      * Posts Page
      */
@@ -185,7 +215,8 @@ class Home_controller extends Home_Core_Controller
             $data['posts'] = get_cached_data($posts_key . '_page' . $pagination['current_page']);
             if (empty($data['posts'])) {
                 $data['posts'] = $this->post_model->get_paginated_category_posts($category->id, $pagination['offset'], $pagination['per_page']);
-                set_cache_data($posts_key . '_page' . $pagination['current_page'], $data['posts']);
+                $data['get_current_category'] = $this->category_model->get_category_by_slug($category->name_slug);
+                $data['get_sub_categories'] = $this->category_model->get_subcategories_by_parent_id($category->id);
             }
 
             $this->load->view('partials/_header', $data);

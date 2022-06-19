@@ -3,6 +3,9 @@
 <html lang="<?= $this->selected_lang->short_form ?>">
 <head>
     <meta charset="utf-8">
+
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> <META HTTP-EQUIV="Expires" CONTENT="-1">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= xss_clean($title); ?> - <?= xss_clean($this->settings->site_title); ?></title>
@@ -62,9 +65,10 @@
     <?= !empty($this->fonts->primary_font_url) ? $this->fonts->primary_font_url : ''; ?>
     <?= !empty($this->fonts->secondary_font_url) ? $this->fonts->secondary_font_url : ''; ?>
     <?= !empty($this->fonts->tertiary_font_url) ? $this->fonts->tertiary_font_url : ''; ?>
-    <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet"/>
     <link href="<?= base_url(); ?>assets/css/style-1.9.min.css" rel="stylesheet"/>
     <link href="<?= base_url(); ?>assets/css/plugins-1.9.css" rel="stylesheet"/>
+    <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
 <?php if ($this->dark_mode == 1) : ?>
     <link href="<?= base_url(); ?>assets/css/dark-1.9.min.css" rel="stylesheet"/>
 <?php endif; ?>
@@ -72,6 +76,8 @@
 <?php if ($this->selected_lang->text_direction == "rtl"): ?>
     <link href="<?= base_url(); ?>assets/css/rtl-1.9.min.css" rel="stylesheet"/>
     <script>var rtl = true;</script>
+    
+
 <?php endif; ?>
     <?php $this->load->view('partials/_css_js_header'); ?>
     <?= $this->general_settings->custom_css_codes; ?>
@@ -86,7 +92,7 @@
 </head>
 <body>
 <header id="header">
-    <?php $this->load->view('nav/_nav_top'); ?>
+    
     <div class="logo-banner">
         <div class="container">
             <div class="col-sm-12">
@@ -107,6 +113,7 @@
         </div><!--/.container-->
     </div><!--/.top-bar-->
     <?php $this->load->view('nav/_nav_main'); ?>
+   
 
     <div class="mobile-nav-container">
         <div class="nav-mobile-header">
@@ -129,7 +136,7 @@
             </div>
         </div>
     </div>
-
+    <?php $this->load->view('nav/_nav_top'); ?>
 </header>
 <div id="overlay_bg" class="overlay-bg"></div>
 

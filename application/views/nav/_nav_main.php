@@ -11,6 +11,11 @@
                                 <?= trans("home"); ?>
                             </a>
                         </li>
+                        <li >
+                            <a href="vlog">
+                                Vlog
+                            </a>
+                        </li>
                     <?php endif; ?>
                     <?php
                     $total_item = 0;

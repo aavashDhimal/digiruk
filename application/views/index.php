@@ -16,21 +16,11 @@
                 <?php $x = 0;
                 foreach ($this->categories as $category):
                     if ($category->show_at_homepage == 1 && $category->lang_id == $this->selected_lang->id):
-                        if ($category->block_type == "block-1") {
-                            $this->load->view('partials/_category_block_type_1', ['category' => $category]);
-                        }
-                        if ($category->block_type == "block-2") {
-                            $this->load->view('partials/_category_block_type_2', ['category' => $category]);
-                        }
-                        if ($category->block_type == "block-3") {
-                            $this->load->view('partials/_category_block_type_3', ['category' => $category]);
-                        }
+                        
                         if ($category->block_type == "block-4") {
                             $this->load->view('partials/_category_block_type_4', ['category' => $category]);
                         }
-                        if ($category->block_type == "block-5") {
-                            $this->load->view('partials/_category_block_type_5', ['category' => $category]);
-                        }
+                       
                         if ($x == 0) {
                             $this->load->view("partials/_ad_spaces", ["ad_space" => "index_top", "class" => "bn-p-b"]);
                         }
@@ -87,7 +77,9 @@
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
-           
+            <div id="sidebar" class="col-sm-4 col-xs-12">
+                <?php $this->load->view('partials/_sidebar'); ?>
+            </div>
         </div>
     </div>
 </div>

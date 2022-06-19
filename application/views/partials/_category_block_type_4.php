@@ -12,12 +12,13 @@
                 <!--Include subcategories-->
                 <?php $this->load->view('partials/_block_subcategories', ['category' => $category, 'subcategories' => $subcategories]); ?>
             </div>
-            <div class="section-content">
-                <div class="tab-content pull-left">
-                    <div role="tabpanel" class="tab-pane fade in active" id="all-<?php echo html_escape($category->id); ?>">
-                        <div class="row">
-                            <?php $category_posts = get_posts_by_category_id($category->id, $this->categories);
-                            $i = 0;
+                <div id="content" class="col-sm-8 col-xs-12">
+                    <div class="section-content">
+                        <div class="tab-content pull-left">
+                            <div role="tabpanel" class="tab-pane fade in active" id="all-<?php echo html_escape($category->id); ?>">
+                                <div class="row">
+                                    <?php $category_posts = get_posts_by_category_id($category->id, $this->categories);
+                                        $i = 0;
                             if (!empty($category_posts)):
                                 foreach ($category_posts as $post):
                                     if ($i < 3):?>

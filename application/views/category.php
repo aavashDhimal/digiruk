@@ -26,30 +26,16 @@
                 </ol>
             </div>
             <div id="content" class="col-sm-8">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h1 class="page-title"><?php echo html_escape($category->name); ?></h1>
-                    </div>
-                    <?php $count = 0; ?>
-                    <?php foreach ($posts as $post): ?>
-                        <?php if ($count != 0 && $count % 2 == 0): ?>
-                            <div class="col-sm-12"></div>
-                        <?php endif; ?>
-                        <?php $this->load->view("post/_post_item_list", ["post" => $post]); ?>
-                        <?php if ($count == 1): ?>
-                            <?php $this->load->view("partials/_ad_spaces", ["ad_space" => "category_top", "class" => "p-b-30"]); ?>
-                        <?php endif; ?>
-                        <?php $count++; ?>
-                    <?php endforeach; ?>
-                    <?php $this->load->view("partials/_ad_spaces", ["ad_space" => "category_bottom", "class" => ""]); ?>
-                    <div class="col-sm-12 col-xs-12">
-                        <?php echo $this->pagination->create_links(); ?>
-                    </div>
-                </div>
+           
+             
+             <?php
+             
+             $subcategories = get_subcategories($category->id, $this->categories);
+                    foreach ($subcategories as $subcategory):
+             $this->load->view('partials/_category_block_type_4', ['category' => $subcategory]);
+                endforeach;
+             ?>
             </div>
-            <div id="sidebar" class="col-sm-4">
-                <?php $this->load->view('partials/_sidebar'); ?>
-            </div>
-        </div>
+            
     </div>
 </div>

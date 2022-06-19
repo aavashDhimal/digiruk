@@ -382,7 +382,7 @@ img.lazyload:not([src]) {
 .top-bar .top-menu-right {
     margin: 0;
     padding: 0;
-    float: right
+    float: center
 }
 
 .top-bar .top-menu > li {
@@ -1826,7 +1826,8 @@ img.lazyload:not([src]) {
 }
 
 #content {
-    min-height: 400px
+    min-height: 400px;
+    width: 100%
 }
 
 .section {
@@ -2099,6 +2100,7 @@ img.lazyload:not([src]) {
     font-weight: 500;
     margin-bottom: 5px;
     margin-top: 10px;
+    padding-top: 40px;
 }
 
 .post-item-mid .title a {
@@ -6528,12 +6530,16 @@ form select.error {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 100%) {
     #content {
         width: 100%;
         padding-bottom: 60px;
         padding-top: 15px
+    
     }
+    .col-sm-8 {
+        width: 100%;
+      }
 
     .page-gallery .page-title {
         margin-top: 30px
@@ -7396,3 +7402,4 @@ form select.error {
         height: 240px;
     }
 }
+
