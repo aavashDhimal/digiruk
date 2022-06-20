@@ -20,7 +20,7 @@
             <!-- footer widget random posts-->
             <div class="col-sm-4 col-xs-12">
                 <!--Include footer random posts partial-->
-                <?php $this->load->view('partials/_footer_random_posts'); ?>
+                <?php $this->load->view('partials/_footer_random_posts'); ?> 
             </div><!-- /.col-sm-4 -->
             <!-- footer widget follow us-->
             <div class="col-sm-4 col-xs-12">
