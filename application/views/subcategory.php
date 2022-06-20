@@ -25,25 +25,7 @@
                     endif; ?>
                 </ol>
             </div>
-            <?php
-                          if($category->parent_id<=1):?>
             <div id="content" class="col-sm-8">
-           
-                        
-             <?php
-             $subcategories = get_subcategories($category->id, $this->categories);
-                    foreach ($subcategories as $subcategory):
-             $this->load->view('partials/_category_block_type_4', ['category' => $subcategory]);
-                endforeach;
-                ?>
-           <?php endif;
-             ?>
-            </div>
-            
-        
-        <?php
-      if($category->parent_id>=1):?>
-            <div class="col-sm-8">
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="page-title"><?php echo html_escape($category->name); ?></h1>
@@ -56,7 +38,7 @@
                         <?php $this->load->view("post/_post_item_list", ["post" => $post]); ?>
                         <?php if ($count == 1): ?>
                             <?php $this->load->view("partials/_ad_spaces", ["ad_space" => "category_top", "class" => "p-b-30"]); ?>
-                        <?php endif; ?>  
+                        <?php endif; ?>
                         <?php $count++; ?>
                     <?php endforeach; ?>
                     <?php $this->load->view("partials/_ad_spaces", ["ad_space" => "category_bottom", "class" => ""]); ?>
@@ -68,10 +50,6 @@
             <div id="sidebar" class="col-sm-4">
                 <?php $this->load->view('partials/_sidebar'); ?>
             </div>
-            <?php    endif; ?>
         </div>
-    </div>
-</div>
-            
     </div>
 </div>

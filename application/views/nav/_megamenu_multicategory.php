@@ -3,7 +3,7 @@
 if (!empty($category)):
     $category_posts = get_posts_by_category_id($category_id, $this->categories); ?>
     <li class="dropdown megamenu-fw mega-li-<?php echo $category->id; ?> <?php echo (uri_string() == html_escape($category->name_slug)) ? 'active' : ''; ?>">
-        <a href="<?php echo generate_category_url($category); ?>" class="dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo html_escape($category->name); ?> <span class="caret"></span></a>
+        <a href="<?php echo generate_category_url($category); ?>" class="dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-expanded="false"><img src="<?php echo html_escape($category->logo); ?>"><?php echo html_escape($category->name); ?> <span class="caret"></span></a>
         <!--Check if has posts-->
         <?php if (!empty($category_posts) && count($category_posts) > 0): ?>
             <ul class="dropdown-menu megamenu-content dropdown-top" role="menu" aria-expanded="true" data-mega-ul="<?php echo $category->id; ?>">

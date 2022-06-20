@@ -55,7 +55,7 @@ $routes = $this->config->item('routes');
 $route['default_controller'] = 'home_controller';
 $route['404_override'] = 'home_controller/error_404';
 $route['translate_uri_dashes'] = FALSE;
-$route['index'] = 'home_controller/index';
+$route['index'] = 'home_controller/category/news';
 $route['error-404'] = 'home_controller/error_404';
 
 

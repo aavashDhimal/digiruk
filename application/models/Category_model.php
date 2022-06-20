@@ -98,7 +98,12 @@ class Category_model extends CI_Model
         $query = $this->db->query($sql, array(clean_number($id)));
         return $query->row();
     }
-
+    // public function get_category_img($id)
+    // {
+    //     $sql = "SELECT categories.*, (SELECT name_slug FROM categories AS tbl_categories WHERE tbl_categories.id = categories.parent_id) as parent_slug FROM categories WHERE categories.id =  ?";
+    //     $query = $this->db->query($sql, array(clean_number($id)));
+    //     return $query->row();
+    // }
     //get category by slug
     public function get_category_by_slug($slug)
     {
