@@ -68,7 +68,7 @@
     <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet"/>
     <link href="<?= base_url(); ?>assets/css/style-1.9.min.css" rel="stylesheet"/>
     <link href="<?= base_url(); ?>assets/css/plugins-1.9.css" rel="stylesheet"/>
-    <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    
 <?php if ($this->dark_mode == 1) : ?>
     <link href="<?= base_url(); ?>assets/css/dark-1.9.min.css" rel="stylesheet"/>
 <?php endif; ?>
@@ -79,6 +79,7 @@
     
 
 <?php endif; ?>
+<link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
     <?php $this->load->view('partials/_css_js_header'); ?>
     <?= $this->general_settings->custom_css_codes; ?>
     <?= $this->general_settings->adsense_activation_code; ?>

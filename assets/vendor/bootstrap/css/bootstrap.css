@@ -6765,3 +6765,16 @@ button.close {
 .div-container{
   background-color: red;
 }
+.navbar{
+  margin-bottom: 0 !important;
+}
+
+.logo{
+ min-width:240px;
+  object-fit:cover;
+}
+.navbar-default {
+  background-color: #FF0404;
+  border-color: #FF0404;
+
+}

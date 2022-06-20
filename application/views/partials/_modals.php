@@ -51,6 +51,7 @@
     </div>
 <?php endif; ?>
 
+
 <?php if ($this->auth_check): ?>
     <div id="modal_add_post" class="modal fade modal-center add-post-modal" role="dialog">
         <div class="modal-dialog modal-lg">
