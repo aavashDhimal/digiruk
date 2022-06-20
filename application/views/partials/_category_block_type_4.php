@@ -21,8 +21,8 @@
                                         $i = 0;
                             if (!empty($category_posts)):
                                 foreach ($category_posts as $post):
-                                    if ($i < 3):?>
-                                        <div class="col-sm-4">
+                                    if ($i < 4):?>
+                                        <div class="col-sm-3">
                                             <?php $this->load->view("post/_post_item_mid", ["post" => $post]); ?>
                                         </div>
                                     <?php endif;
@@ -40,8 +40,8 @@
                                     $i = 0;
                                     if (!empty($category_posts)):
                                         foreach ($category_posts as $post):
-                                            if ($i < 3):?>
-                                                <div class="col-sm-4">
+                                            if ($i < 4):?>
+                                                <div class="col-sm-3">
                                                     <?php $this->load->view("post/_post_item_mid", ["post" => $post]); ?>
                                                 </div>
                                             <?php endif;

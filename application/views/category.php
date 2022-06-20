@@ -49,7 +49,7 @@
                             </div>
                             <?php $count = 0; ?>
                             <?php foreach ($posts as $post): ?>
-                                <?php if ($count != 0 && $count % 2 == 0): ?>
+                                <?php if ($count != 0 && $count % 4 == 0): ?>
                                     <div class="col-sm-12"></div>
                                 <?php endif; ?>
                                 <?php $this->load->view("post/_post_item_list", ["post" => $post]); ?>
