@@ -6520,7 +6520,7 @@ form select.error {
     }
 }
 
-@media(max-width:991px) {
+@media(max-width:200px) {
     #content {
         width: 100%;
         padding-bottom: 60px;
@@ -7290,7 +7290,7 @@ form select.error {
     }
 }
 
-@media(max-width:480px) {
+@media(max-width:200px) {
     .featured-box .caption .post-meta {
         display: none
     }
