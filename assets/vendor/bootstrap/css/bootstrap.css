@@ -6787,13 +6787,10 @@ html,body{
   border-color: red;
 
 }
-.post-item-image{
-  border: solid green;
-  border-width: 2px;
-}
+
 .swiper-slide{
   border: solid green;
-  border-width: 2px;
+  border-width: 3px;
 }
 .post-item-mid .title {
   padding-top: 0px;
