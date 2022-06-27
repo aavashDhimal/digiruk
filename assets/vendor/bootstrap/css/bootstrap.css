@@ -6778,3 +6778,23 @@ button.close {
   border-color: #FF0404;
 
 }
+html,body{
+  
+  margin: 0; /* Space from this element (entire page) and others*/
+  padding: 0; /*space from content and border*/
+  border: solid red;
+  border-width: 3px;
+  border-color: red;
+
+}
+.post-item-image{
+  border: solid green;
+  border-width: 2px;
+}
+.swiper-slide{
+  border: solid green;
+  border-width: 2px;
+}
+.post-item-mid .title {
+  padding-top: 0px;
+}
