@@ -6521,7 +6521,7 @@ form select.error {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 200px) {
     /* .nav-mobile {
         display: none !important;
     } */
@@ -6715,7 +6715,7 @@ form select.error {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 200px) {
     .mobile-nav-search .search-form {
         width: 100%;
         position: fixed;
