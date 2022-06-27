@@ -6510,7 +6510,7 @@ form select.error {
     }
 }
 
-@media(min-width:992px) {
+@media(min-width:200px) {
     .nav-mobile {
         display: none !important
     }
