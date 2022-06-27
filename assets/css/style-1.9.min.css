@@ -6421,14 +6421,14 @@ form select.error {
     }
 }
 
-@media(min-width:1300px) {
+@media(min-width:800px) {
     .random-slider-container {
         max-height: 389.1px;
         overflow: hidden
     }
 }
 
-@media(max-width:1200px) {
+@media(max-width:300px) {
     .container {
         width: 100%
     }
