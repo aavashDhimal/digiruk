@@ -6700,7 +6700,7 @@ form select.error {
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:200px) {
     .mobile-nav-search .search-form {
         width: 100%;
         position: fixed;
