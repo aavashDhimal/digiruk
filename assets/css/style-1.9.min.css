@@ -637,7 +637,7 @@ img.lazyload:not([src]) {
     font-size: 14px;
     font-weight: 700;
     line-height: 50px;
-    padding: 1px;
+    padding: 0 16px;
     position: relative;
     text-transform: uppercase
 }
