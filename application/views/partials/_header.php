@@ -79,7 +79,6 @@
     
 
 <?php endif; ?>
-<!-- <link href="<?= base_url(); ?>assets/css/style-1.9.css" rel="stylesheet"/> -->
 <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
     <?php $this->load->view('partials/_css_js_header'); ?>
     <?= $this->general_settings->custom_css_codes; ?>

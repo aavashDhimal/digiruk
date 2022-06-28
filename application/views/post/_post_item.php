@@ -1,5 +1,3 @@
-
-   
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <!--Post row item-->
 <div class="post-item<?php echo check_post_img($post, 'class'); ?>">
@@ -8,7 +6,6 @@
             <span class="category-label" style="background-color: <?php echo html_escape($post->category_color); ?>"><?php echo html_escape($post->category_name); ?></span>
         </a>
     <?php endif; ?>
-    
     <?php if (check_post_img($post)): ?>
         <div class="post-item-image">
             <a href="<?php echo generate_post_url($post); ?>"<?php post_url_new_tab($this, $post); ?>>
@@ -27,9 +24,4 @@
     <p class="description">
         <?php echo html_escape(character_limiter($post->summary, 80, '...')); ?>
     </p>
-    </div>
-    </div>
-    </div>
 </div>
- <!-- Swiper JS -->
- 

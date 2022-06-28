@@ -6521,10 +6521,15 @@ form select.error {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 200px) {
     /* .nav-mobile {
+=======
+@media (min-width: 992px) {
+    .nav-mobile {
+>>>>>>> parent of dcf2794 ( slider done)
         display: none !important;
-    } */
+    }
 
     .overlay-bg {
         display: none !important;
@@ -6550,9 +6555,9 @@ form select.error {
         width: 100%
     }
 
-    /* #header .top-bar {
+    #header .top-bar {
         display: none
-    } */
+    }
 
     #header .logo-banner {
         display: none
@@ -7404,6 +7409,3 @@ form select.error {
     }
 }
 
-/* .nav-mobile-header{
-    background-color: red !important;
-} */
