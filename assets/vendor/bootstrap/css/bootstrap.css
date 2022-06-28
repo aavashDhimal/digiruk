@@ -6789,10 +6789,13 @@ html,body{
   border-color: red;
 
 }
-
+.post-item-image{
+  border: solid green;
+  border-width: 2px;
+}
 .swiper-slide{
   border: solid green;
-  border-width: 3px;
+  border-width: 2px;
 }
 .post-item-mid .title {
   padding-top: 0px;

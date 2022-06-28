@@ -28,8 +28,7 @@
         text-align: center;
         font-size: 18px;
         background: #fff;
-        min-width: 120px !important;
-       
+
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -137,14 +136,9 @@
 <!-- Initialize Swiper -->
 <script>
  var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 20,
+        spaceBetween: 30,
         slidesPerView: 3,
         centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
